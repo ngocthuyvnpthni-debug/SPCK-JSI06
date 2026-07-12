@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập – NETFLIX</title>
+
+    <!-- CSS riêng cho trang đăng nhập và đăng ký -->
+    <link rel="stylesheet" href="css/auth.css" />
+  </head>
+  <body>
+    <!--
+    Hộp form nằm giữa trang
+    CSS đã dùng flexbox để căn giữa cả dọc lẫn ngang
+  -->
+    <div class="auth-box">
+      <!-- Tiêu đề hệ thống -->
+      <h1 class="brand">NETFLIX</h1>
+
+      <!-- Tiêu đề của form này -->
+      <h2 class="form-title">Đăng nhập</h2>
+
+      <!--
+      Form đăng nhập
+      onsubmit="handleLogin(event)" → khi bấm nút submit,
+      trình duyệt sẽ gọi hàm handleLogin() trong login.js
+      và truyền vào đối tượng event
+    -->
+      <form id="loginForm" onsubmit="handleLogin(event)">
+        <!-- Ô nhập Email -->
+        <div class="input-group">
+          <span class="icon">✉</span>
+          <!--
+          type="email" → trình duyệt tự kiểm tra định dạng email
+          required     → bắt buộc phải nhập, không được để trống
+          id="email"   → để JavaScript lấy giá trị bằng getElementById
+        -->
+          <input type="email" id="email" placeholder="Email" required />
+        </div>
+
+        <!-- Ô nhập Mật khẩu -->
+        <div class="input-group">
+          <span class="icon">🔒</span>
+          <!--
+          type="password" → ẩn ký tự thành dấu chấm
+        -->
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+
+        <!--
+        Thẻ hiển thị thông báo lỗi
+        Mặc định rỗng, JavaScript sẽ điền nội dung vào nếu có lỗi
+        Ví dụ: "Email hoặc mật khẩu không đúng."
+      -->
+        <p class="error-msg" id="errorMsg"></p>
+
+        <!--
+        Nút submit form
+        type="submit" → khi click sẽ kích hoạt sự kiện onsubmit của form
+      -->
+        <button type="submit" class="btn-submit">Đăng nhập</button>
+      </form>
+
+      <!-- Đường kẻ phân cách giữa 2 cách đăng nhập -->
+      <div class="divider"><span>hoặc</span></div>
+
+      <!--
+      Nút đăng nhập bằng Google
+      onclick="loginGoogle()" → gọi hàm loginGoogle() trong login.js
+    -->
+      <button class="btn-google" onclick="loginGoogle()">
+        <img
+          src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+          alt="Google"
+        />
+        Đăng nhập với Google
+      </button>
+
+      <!-- Link chuyển sang trang đăng ký nếu chưa có tài khoản -->
+      <p class="switch-link">
+        Chưa có tài khoản? <a href="sign-in.html">Đăng ký</a>
+      </p>
+    </div>
+
+    <!--
+    SCRIPT - Thứ tự load quan trọng:
+      1. Firebase CDN    → tạo biến `firebase`
+      2. firebase-config → khởi tạo kết nối
+      3. login.js        → xử lý đăng nhập
+  -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

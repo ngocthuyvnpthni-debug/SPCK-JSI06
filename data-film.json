@@ -1,0 +1,146 @@
+[
+  {
+    "id": "p1",
+    "title": "Tựa Phim 1",
+    "category": "Phim",
+    "type": "movie",
+    "imageUrl": "https://fr.web.img5.acsta.net/img/d1/cf/d1cfdc2720ff648e8b93971dd7551732.jpg",
+    "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "description": "Mô tả ngắn về Phim 1..."
+  },
+  {
+    "id": "p2",
+    "title": "Tựa Phim 2",
+    "category": "Phim",
+    "type": "movie",
+    "imageUrl": "https://petapixel.com/assets/uploads/2024/01/The-Star-of-System-Sol-Rectangle-640x800.jpg",
+    "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "description": "Mô tả ngắn về Phim 2..."
+  },
+  {
+    "id": "p3",
+    "title": "Tựa Phim 3",
+    "category": "Phim",
+    "type": "movie",
+    "imageUrl": "https://cdnmedia.baotintuc.vn/Upload/r2ZmuVn2vsFEWUzMUAXAg/files/2024/08/haimuoi(1).jpg",
+    "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "description": "Mô tả ngắn..."
+  },
+  {
+    "id": "p4",
+    "title": "Tựa Phim 4",
+    "category": "Phim",
+    "type": "tv",
+    "imageUrl": "https://simg.zalopay.com.vn/zlp-website/assets/phim_bo_trung_quoc_6_bdfada0c67.jpg",
+    "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "description": "Phim bộ Trung Quốc đặc sắc."
+  },
+  {
+    "id": "kd1",
+    "title": "CROW",
+    "category": "Kinh Dị",
+    "type": "movie",
+    "imageUrl": "https://simg.zalopay.com.vn/zlp-website/assets/phim_ma_kinh_di_my_6_08438b5b06.jpg",
+    "videoUrl": "https://res.cloudinary.com/drnl0c1w8/video/upload/854284-hd_1920_1080_30fps_tdc8bw.mp4",
+    "description": "Búp bê quỷ ám nổi tiếng."
+  },
+  {
+    "id": "kd2",
+    "title": "SINISTER",
+    "category": "Kinh Dị",
+    "type": "movie",
+    "imageUrl": "https://bazaarvietnam.vn/wp-content/uploads/2021/07/phim-kinh-di-hay-nhat-moi-thoi-dai-diem-go-e1626883969245.jpeg",
+    "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "description": "Vụ án tâm linh có thật."
+  },
+  {
+    "id": "kd3",
+    "title": "Insidious",
+    "category": "Kinh Dị",
+    "type": "movie",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Insidious_poster.jpg/250px-Insidious_poster.jpg",
+    "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "description": "Ám ảnh kinh hoàng."
+  },
+  {
+    "id": "kd4",
+    "title": "Smile",
+    "category": "Kinh Dị",
+    "type": "movie",
+    "imageUrl": "https://play-lh.googleusercontent.com/NLd3erPoZmSi0oczSzNqq_MF0q-2sGR2PRLD9_RrgAGHjLjRWI5zbs4LrI8NGa-k0zcfQvV6B6hcii4zIRg=w240-h480-rw",
+    "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "description": "Lời nguyền nụ cười chết chóc."
+  },
+  {
+    "id": "hd1",
+    "title": "John Wick 4",
+    "category": "Hành Động",
+    "type": "movie",
+    "imageUrl": "https://taynguyenfilm.com/wp-content/uploads/2023/03/review-phim-john-wick-4-cuoc-chien-song-con-1.jpg",
+    "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "description": "Cao trào của sát thủ truyền thuyết."
+  },
+  {
+    "id": "hd2",
+    "title": "Mission Impossible",
+    "category": "Hành Động",
+    "type": "movie",
+    "imageUrl": "https://m.media-amazon.com/images/I/91EtQD0P0dL._AC_UF1000,1000_QL80_.jpg",
+    "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "description": "Nhiệm vụ bất khả thi."
+  },
+  {
+    "id": "hd3",
+    "title": "Extraction 2",
+    "category": "Hành Động",
+    "type": "movie",
+    "imageUrl": "https://www.studyphim.vn/system/movies/9271/thumbnails/original/Extraction%202%20.jpeg",
+    "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "description": "Giải cứu nghẹt thở."
+  },
+  {
+    "id": "hd4",
+    "title": "The Dark Knight",
+    "category": "Hành Động",
+    "type": "movie",
+    "imageUrl": "https://play-lh.googleusercontent.com/auIs5tjWlLYaFPGClZOJ7m5YVbnX6uBvz0X02r8TkwFKdzE53ww2MqWSS9gU0YNqoYwvpg",
+    "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "description": "Huyền thoại Batman."
+  },
+  {
+    "id": "hh1",
+    "title": "Despicable Me",
+    "category": "Hoạt Hình",
+    "type": "movie",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTY3NjY0MTQ0Nl5BMl5BanBnXkFtZTcwMzQ2MTc0Mw@@._V1_.jpg",
+    "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "description": "Minions vui nhộn."
+  },
+  {
+    "id": "hh2",
+    "title": "Frozen",
+    "category": "Hoạt Hình",
+    "type": "movie",
+    "imageUrl": "https://lumiere-a.akamaihd.net/v1/images/p_frozen_18373_3131259c.jpeg",
+    "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "description": "Nữ hoàng băng giá."
+  },
+  {
+    "id": "hh3",
+    "title": "Coco",
+    "category": "Hoạt Hình",
+    "type": "movie",
+    "imageUrl": "https://lumiere-a.akamaihd.net/v1/images/p_coco_19736_fd5fa537.jpeg",
+    "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "description": "Hành trình thế giới linh hồn."
+  },
+  {
+    "id": "hh4",
+    "title": "Up",
+    "category": "Hoạt Hình",
+    "type": "movie",
+    "imageUrl": "https://lumiere-a.akamaihd.net/v1/images/p_up_19753_e6f911e3.jpeg?region=0%2C0%2C540%2C810",
+    "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "description": "Cuộc phiêu lưu cảm động."
+  }
+]

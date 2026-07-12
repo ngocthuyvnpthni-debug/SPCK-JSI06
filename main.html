@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Style Interface</title>
+    <link rel="stylesheet" href="css\main.css">
+</head>
+
+<body>
+
+    <div id="navbar">
+        <img src="https://images.ctfassets.net/4cd45et68cgf/Rx83JoRDMkYNlMC9MKzcB/2b14d5a59fc3937afd3f03191e19502d/Netflix-Symbol.png?w=700&h=456"
+            class="logo">
+        <a href="#" data-tab="home" class="nav-link active">Trang chủ</a>
+        <a href="#" data-tab="tv" class="nav-link">TV Shows</a>
+        <a href="#" data-tab="movies" class="nav-link">Phim</a>
+        <a href="#" data-tab="new" class="nav-link">Mới & Phổ biến</a>
+        <a href="#" data-tab="mylist" class="nav-link">Danh sách của tôi</a>
+        <input type="text" id="searchInput" placeholder="Search" class="search-input">
+
+        <div class="user-menu">
+            <span class="username-display" id="usernameDisplay"></span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" class="avatar"
+                id="userAvatar">
+            <div class="dropdown" id="userDropdown">
+                <a href="#" id="openSettings">Cài đặt tài khoản</a>
+                <a href="#" id="logoutBtn">Đăng xuất</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-content active" id="home">
+        <h2 class="section-title">Phim</h2>
+        <div class="movie-row">
+            <div class="movie-card">
+                <img src="https://fr.web.img5.acsta.net/img/d1/cf/d1cfdc2720ff648e8b93971dd7551732.jpg">
+                <div class="overlay">
+                    <h3>Tựa Phim 1</h3>
+                    <p>Mô tả ngắn về Phim 1...</p>
+                    <button class="play-btn" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Xem ngay</button>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://petapixel.com/assets/uploads/2024/01/The-Star-of-System-Sol-Rectangle-640x800.jpg">
+                <div class="overlay">
+                    <h3>Tựa Phim 2</h3>
+                    <p>Mô tả ngắn về Phim 2...</p>
+                    <button class="play-btn" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Xem ngay</button>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://cdnmedia.baotintuc.vn/Upload/r2ZmuVn2vsFEWUzMUAXAg/files/2024/08/haimuoi(1).jpg">
+                <div class="overlay">
+                    <h3>Tựa Phim 3</h3>
+                    <p>Mô tả ngắn...</p>
+                    <button class="play-btn" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Xem ngay</button>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://simg.zalopay.com.vn/zlp-website/assets/phim_bo_trung_quoc_6_bdfada0c67.jpg">
+                <div class="overlay">
+                    <h3>Tựa Phim 4</h3>
+                    <p>Mô tả ngắn...</p>
+                    <button class="play-btn" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Xem ngay</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Kinh Dị</h2>
+        <div class="movie-row">
+            <div class="movie-card">
+                <img src="https://simg.zalopay.com.vn/zlp-website/assets/phim_ma_kinh_di_my_6_08438b5b06.jpg">
+                <div class="overlay">
+                    <h3>CROW</h3>
+                    <p>Búp bê quỷ ám nổi .</p>
+                    <button class="play-btn"
+                        data-video="https://res.cloudinary.com/drnl0c1w8/video/upload/854284-hd_1920_1080_30fps_tdc8bw.mp4">Xem
+                        ngay</button>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img
+                    src="https://bazaarvietnam.vn/wp-content/uploads/2021/07/phim-kinh-di-hay-nhat-moi-thoi-dai-diem-go-e1626883969245.jpeg">
+                <div class="overlay">
+                    <h3>SINISTER</h3>
+                    <p>Vụ án tâm linh có thật.</p>
+                    <button class="play-btn" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Xem ngay</button>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Insidious_poster.jpg/250px-Insidious_poster.jpg">
+                <div class="overlay">
+                    <h3>Insidious</h3>
+                    <p>Ám ảnh kinh hoàng.</p>
+                    <button class="play-btn" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Xem ngay</button>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img
+                    src="https://play-lh.googleusercontent.com/NLd3erPoZmSi0oczSzNqq_MF0q-2sGR2PRLD9_RrgAGHjLjRWI5zbs4LrI8NGa-k0zcfQvV6B6hcii4zIRg=w240-h480-rw">
+                <div class="overlay">
+                    <h3>Smile</h3>
+                    <p>Lời nguyền nụ cười chết chóc.</p>
+                    <button class="play-btn" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Xem ngay</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Hành Động</h2>
+        <div class="movie-row">
+            <div class="movie-card">
+                <img
+                    src="https://taynguyenfilm.com/wp-content/uploads/2023/03/review-phim-john-wick-4-cuoc-chien-song-con-1.jpg">
+                <div class="overlay">
+                    <h3>John Wick 4</h3>
+                    <p>Cao trào của sát thủ truyền thuyết.</p>
+                    <button class="play-btn" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Xem ngay</button>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/91EtQD0P0dL._AC_UF1000,1000_QL80_.jpg">
+                <div class="overlay">
+                    <h3>Mission Impossible</h3>
+                    <p>Nhiệm vụ bất khả thi.</p>
+                    <button class="play-btn" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Xem ngay</button>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://www.studyphim.vn/system/movies/9271/thumbnails/original/Extraction%202%20.jpeg">
+                <div class="overlay">
+                    <h3>Extraction 2</h3>
+                    <p>Giải cứu nghẹt thở.</p>
+                    <button class="play-btn" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Xem ngay</button>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img
+                    src="https://play-lh.googleusercontent.com/auIs5tjWlLYaFPGClZOJ7m5YVbnX6uBvz0X02r8TkwFKdzE53ww2MqWSS9gU0YNqoYwvpg">
+                <div class="overlay">
+                    <h3>The Dark Knight</h3>
+                    <p>Huyền thoại Batman.</p>
+                    <button class="play-btn" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Xem ngay</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Hoạt Hình</h2>
+        <div class="movie-row">
+            <div class="movie-card">
+                <img
+                    src="https://m.media-amazon.com/images/M/MV5BMTY3NjY0MTQ0Nl5BMl5BanBnXkFtZTcwMzQ2MTc0Mw@@._V1_.jpg">
+                <div class="overlay">
+                    <h3>Despicable Me</h3>
+                    <p>Minions vui nhộn.</p>
+                    <button class="play-btn" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Xem ngay</button>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/p_frozen_18373_3131259c.jpeg">
+                <div class="overlay">
+                    <h3>Frozen</h3>
+                    <p>Nữ hoàng băng giá.</p>
+                    <button class="play-btn" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Xem ngay</button>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/p_coco_19736_fd5fa537.jpeg">
+                <div class="overlay">
+                    <h3>Coco</h3>
+                    <p>Hành trình thế giới linh hồn.</p>
+                    <button class="play-btn" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Xem ngay</button>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/p_up_19753_e6f911e3.jpeg?region=0%2C0%2C540%2C810">
+                <div class="overlay">
+                    <h3>Up</h3>
+                    <p>Cuộc phiêu lưu cảm động.</p>
+                    <button class="play-btn" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Xem ngay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-content" id="tv">
+        <h2 class="section-title">TV Shows (Phim Bộ)</h2>
+        <div class="movie-row" id="tv-row"></div> 
+    </div>
+    <div class="tab-content" id="movies">
+        <h2 class="section-title">Phim lẻ</h2>
+        <p style="margin:20px;">Toàn bộ phim lẻ.</p>
+    </div>
+    <div class="tab-content" id="new">
+        <h2 class="section-title">Mới & Phổ biến</h2>
+        <p style="margin:20px;">Phim mới cập nhật, xu hướng.</p>
+    </div>
+    <div class="tab-content" id="mylist">
+        <h2 class="section-title">Danh sách của tôi</h2>
+        <div class="movie-row"></div>
+    </div>
+
+    <div id="videoPlayer" class="video-player">
+        <span class="close-btn">×</span>
+        <video id="video" controls autoplay></video>
+    </div>
+
+    <div id="settingsModal" class="settings-modal">
+        <div class="settings-content">
+            <span class="close-settings" id="closeSettings">×</span>
+            <h2>Thông tin cá nhân</h2>
+            <div class="profile-pic-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+                    class="preview-avatar">
+            </div>
+            <div class="input-group">
+                <label>Tên hiển thị (Không phải Email)</label>
+                <input type="text" id="editName" placeholder="Ví dụ: Quan IT">
+            </div>
+            <div class="input-group">
+                <label>Số điện thoại</label>
+                <input type="text" id="editPhone" placeholder="Nhập số điện thoại">
+            </div>
+            <div class="input-group">
+                <label>Đổi mật khẩu mới</label>
+                <input type="password" id="editPass" placeholder="Nhập mật khẩu mới">
+            </div>
+            <button class="save-btn" id="saveSettingsBtn">Lưu thay đổi</button>
+            <div id="settingsMsg" style="margin-top: 10px; font-size: 14px; text-align: center;"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-title">Bạn có câu hỏi? Liên hệ 1900 1234</p>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Trung tâm trợ giúp</a></li>
+                    <li><a href="#">Tài khoản</a></li>
+                    <li><a href="#">Trung tâm đa phương tiện</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Quan hệ với nhà đầu tư</a></li>
+                    <li><a href="#">Việc làm</a></li>
+                    <li><a href="#">Các cách xem</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Quyền riêng tư</a></li>
+                    <li><a href="#">Tùy chọn cookie</a></li>
+                    <li><a href="#">Thông tin doanh nghiệp</a></li>
+                    <li><a href="#">Liên hệ chúng tôi</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Kiểm tra tốc độ</a></li>
+                    <li><a href="#">Thông báo pháp lý</a></li>
+                    <li><a href="#">Chỉ có trên Netflix</a></li>
+                </ul>
+            </div>
+            <p class="footer-copy">© 2025 Netflix Clone by You</p>
+        </div>
+    </footer>
+
+    <script src="js\main.JS"></script>
+    <script src="js\load-film.js"></script>
+</body>
+
+</html>

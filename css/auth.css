@@ -1,0 +1,300 @@
+/* auth.css
+   Responsive authentication stylesheet
+   Replace with your preferred colors/images as needed.
+*/
+/* =========================================
+   VARIABLES (Khai báo biến màu sắc dùng chung)
+   ========================================= */
+:root {
+  --brand-color: #e50914;
+  --brand-hover-shadow: rgba(229, 9, 20, 0.4);
+  --brand-focus-shadow: rgba(229, 9, 20, 0.35);
+  --text-primary: #ffffff;
+  --text-muted: #bbbbbb;
+  --bg-overlay: rgba(20, 20, 20, 0.72);
+  --input-bg: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================
+   RESET & BASE
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
+              url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b") center/cover no-repeat;
+}
+
+/* =========================================
+   MAIN CONTAINER (Hộp Form)
+   ========================================= */
+.auth-box {
+  width: 100%;
+  max-width: 460px;
+  padding: 40px;
+  background: var(--bg-overlay);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+  animation: show 0.6s ease;
+}
+
+/* =========================================
+   TYPOGRAPHY (Tiêu đề & Chữ)
+   ========================================= */
+.brand {
+  text-align: center;
+  color: var(--brand-color);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.form-title {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+/* =========================================
+   FORM INPUTS (Ô nhập liệu)
+   ========================================= */
+.input-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 16px 16px 16px 46px;
+  border: none;
+  border-radius: 12px;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.input-group input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--brand-color), 0 0 18px var(--brand-focus-shadow);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================================
+   MESSAGES (Thông báo lỗi/thành công)
+   ========================================= */
+.error-msg,
+.success-msg {
+  text-align: center;
+  font-size: 0.9rem;
+  min-height: 20px;
+  margin-bottom: 10px;
+}
+
+.error-msg {
+  color: #ff6d6d;
+}
+
+.success-msg {
+  color: #7dff98;
+}
+
+/* =========================================
+   BUTTONS (Nút bấm)
+   ========================================= */
+.btn-submit,
+.btn-google {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Nút Submit */
+.btn-submit {
+  background: var(--brand-color);
+  color: var(--text-primary);
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px var(--brand-hover-shadow);
+}
+
+/* Nút Google */
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--text-primary);
+  color: #333; /* Thêm màu chữ để dễ đọc trên nền trắng */
+}
+
+.btn-google img {
+  width: 22px;
+}
+
+/* =========================================
+   DIVIDER (Đường gạch ngang "Hoặc")
+   ========================================= */
+.divider {
+  display: flex;
+  align-items: center;
+  color: #aaa;
+  margin: 24px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #555;
+}
+
+.divider span {
+  padding: 0 14px;
+}
+
+/* =========================================
+   LINKS (Chuyển đổi Đăng nhập/Đăng ký)
+   ========================================= */
+.switch-link {
+  text-align: center;
+  color: #ddd;
+  margin-top: 22px;
+}
+
+.switch-link a {
+  color: var(--brand-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.switch-link a:hover {
+  color: var(--text-primary);
+}
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* =========================================
+   RESPONSIVE (Responsive theo từng màn hình)
+   ========================================= */
+
+/* --- Desktop --- */
+@media (min-width: 1024px) {
+  .auth-box {
+    max-width: 900px;
+    padding: 60px;
+  }
+
+  .brand {
+    font-size: 3.2rem;
+  }
+
+  .form-title {
+    font-size: 2.2rem;
+  }
+
+  #loginForm,
+  #signupForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .error-msg,
+  .success-msg,
+  .btn-submit {
+    grid-column: 1 / 3;
+  }
+
+  .btn-submit {
+    padding: 18px;
+    font-size: 1.1rem;
+  }
+
+  .btn-google {
+    max-width: 420px;
+    margin: auto;
+  }
+}
+
+/* --- Tablet --- */
+@media (max-width: 1023px) {
+  .auth-box {
+    max-width: 520px;
+  }
+}
+
+/* --- Mobile --- */
+@media (max-width: 576px) {
+  body {
+    padding: 14px;
+  }
+
+  .auth-box {
+    padding: 28px 22px;
+  }
+
+  .brand {
+    font-size: 1.8rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* --- Màn hình chiều cao thấp (Landscape mobile/Tablet nhỏ) --- */
+@media (max-height: 650px) {
+  body {
+    align-items: flex-start;
+    overflow: auto;
+  }
+
+  .auth-box {
+    margin: 20px auto;
+  }
+}

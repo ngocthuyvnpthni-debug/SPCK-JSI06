@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Netflix Auth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\auth.css">
+    <script src="js\sign-in.js"></script>
+</head>
+
+<body>
+    <!--
+    Hộp form nằm giữa trang
+    CSS đã dùng flexbox để căn giữa cả dọc lẫn ngang
+  -->
+    <div class="auth-box">
+      <!-- Tiêu đề hệ thống -->
+      <h1 class="brand">NETFLIX</h1>
+
+      <!-- Tiêu đề của form này -->
+      <h2 class="form-title">Đăng ký</h2>
+
+      <!--
+      Form đăng ký
+      onsubmit="handleSignup(event)" → khi bấm nút submit,
+      trình duyệt sẽ gọi hàm handleSignup() trong signup.js
+    -->
+      <form id="signupForm" onsubmit="handleSignup(event)">
+        <!-- Ô nhập Họ tên -->
+        <div class="input-group">
+          <span class="icon">👤</span>
+          <input type="text" id="name" placeholder="Name" required />
+        </div>
+
+        <!-- Ô nhập Email -->
+        <div class="input-group">
+          <span class="icon">✉</span>
+          <input type="email" id="email" placeholder="Email" required />
+        </div>
+
+        <!-- Ô nhập Mật khẩu -->
+        <div class="input-group">
+          <span class="icon">🔒</span>
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+
+        <!--
+        Ô xác nhận mật khẩu
+        Người dùng phải nhập lại đúng mật khẩu ở trên
+        JavaScript sẽ so sánh 2 ô này trước khi gửi lên Firebase
+      -->
+        <div class="input-group">
+          <span class="icon">🔒</span>
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm password"
+            required
+          />
+        </div>
+
+        <!--
+        Thẻ hiển thị lỗi — JavaScript điền vào khi có lỗi
+        Ví dụ: "Email này đã được đăng ký."
+      -->
+        <p class="error-msg" id="errorMsg"></p>
+
+        <!--
+        Thẻ hiển thị thành công — JavaScript điền vào khi đăng ký xong
+        Ví dụ: "Đăng ký thành công! Đang chuyển sang đăng nhập..."
+      -->
+        <p class="success-msg" id="successMsg"></p>
+
+        <!-- Nút submit form -->
+        <button type="submit" class="btn-submit">Đăng ký</button>
+      </form>
+
+      <!-- Đường kẻ phân cách -->
+      <div class="divider"><span>hoặc</span></div>
+
+      <!--
+      Nút đăng ký bằng Google
+      Nếu lần đầu dùng Google → Firebase tự tạo tài khoản mới
+      Nếu đã dùng Google rồi  → Firebase tự đăng nhập luôn
+    -->
+      <button class="btn-google" onclick="loginGoogle()">
+        <img
+          src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+          alt="Google"
+        />
+        Đăng ký với Google
+      </button>
+
+      <!-- Link chuyển sang trang đăng nhập nếu đã có tài khoản -->
+      <p class="switch-link">
+        Đã có tài khoản? <a href="login.html">Đăng nhập</a>
+      </p>
+    </div>
+
+    <!--
+    SCRIPT - Thứ tự load quan trọng:
+      1. Firebase CDN    → tạo biến `firebase`
+      2. firebase-config → khởi tạo kết nối
+      3. signup.js       → xử lý đăng ký
+  -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+  </body>
+</html>
